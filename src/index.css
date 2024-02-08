@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins", "sans-sarif";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-color: #e4e9f7;
+  --sidebar-color: #fff;
+  --primary-color: #f4f2f2;
+  --primary-color-light: #f4f2f2;
+  --toggle-color: #ddd;
+  --text-color: #707070;
+  --dark-color: #000;
+
+  --trans-02: all 0.2s ease;
+  --trans-03: all 0.3s ease;
+  --trans-04: all 0.4s ease;
+  --trans-04: all 0.5s ease;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--body-color);
+  transition: var(--trans-02);
+}
+
+.sidebar .text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  /* transition: var(--trans-04); */
+  white-space: unset;
+  opacity: 1;
+}
+
+.sidebar .image {
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0px;
+  height: 100%;
+  width: 250px;
+  background-color: var(--sidebar-color);
+  padding: 10px 14px;
+  transition: var(--trans-02);
+}
+
+.sidebar header {
+  position: relative;
+}
+
+.sidebar .image-text img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.sidebar header .image-text {
+  display: flex;
+  align-items: center;
+}
+
+.image-text .header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-text .main {
+  font-weight: 600;
+}
+
+.header-text .sub {
+  margin-top: -2px;
+}
+
+.sidebar header .toggle {
+  position: absolute;
+  top: 50%;
+  right: -25%;
+  transform: translateY(-50%) rotate(180deg);
+  height: 25px;
+  width: 25px;
+  background-color: var(--dark-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--sidebar-color);
+  font-size: 22px;
+}
+
+.sidebar li {
+  height: 50px;
+  /* background-color: red; */
+  margin-top: 10px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar li .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  font-size: 20px;
+}
+
+.sidebar li .icons,
+.sidebar li .text {
+  color: var(--text-color);
+  transition: var(--trans-03);
+}
+
+.sidebar .search-bar input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  background-color: var(--primary-color-light);
+}
+
+.sidebar .search-bar {
+  background-color: var(--primary-color-light);
+}
+
+.sidebar li .links {
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
+  border-radius: 6px;
+  transition: var(--trans-04);
+  text-align: left;
+}
+
+.sidebar li .links:hover {
+  background: var(--primary-color);
+}
+
+.sidebar li .links:hover .icons,
+.sidebar li .links:hover .text {
+  color: var(--dark-color);
+}
+
+.sidebar .menu-bar {
+  height: 100%;
+  height: calc(100% - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar.close {
+  width: 78px;
+}
+
+.sidebar.close .text {
+  opacity: 0;
+}
+
+.sidebar.close .search-bar {
+  background-color: var(--sidebar-color);
+}
+
+body.dark .search-bar input {
+  color: white;
+}
+
+.sidebar.close .toggle {
+  transform: translateY(-50%);
+}
+
+.form_field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  width: 400px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid #7686BC;
+  background-color: #CCCCFF;
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+}
+
+form button {
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #7686BC;
+  color: #fff;
+  margin-top: 10px;
+}
+
+form h2 {
+  color: #7686BC;
+  padding-bottom: 10px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.card_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  height: 100vh;
+}
+
+.cards {
+  width: 350px;
+  height: 150px;
+  padding: 1rem;
+  border: 1px solid #800080;
+  background-color: #C9A0DC;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contact_field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.contact_field .text{
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+
+.contact_field .support {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.contact_field .chat {
+  width: 350px;
+  height: 200px;
+  padding: 1rem;
+  border: 1px solid #E5E4E2;
+  background-color: #E5E4E2;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+.contact_field .chat p{
+  font-size: 12px;
+}
+.input{
+  border-top: 2px solid #B2BEB5;
+  padding: 1rem;
+}
+
+.input input{
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+.about_field{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+}
+.field{
+  margin: 1rem;
+  border: 2px solid #B2BEB5 ;
+  border-radius: 8px;
+  background-color:azure;
+  width: 600px;
+  height: 400px;
+  padding: 1.2rem;
+}
+.home_field{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+}
+.about_card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about_card h1{
+  font-weight: 800;
+  font-size: 3rem;
+  color: #800080;
+}
