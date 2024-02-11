@@ -8,10 +8,10 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SidebarLayout from './SidebarLayout/SidebarLayout.jsx';
-import {Home, About , ContactUs, Users, Login} from "./components/index.js"
+import { Home, About, ContactUs, Users, Login, Products } from "./components/index.js"
 
 
-function createSidebarComponents(component){
+function createSidebarComponents(component) {
   return <SidebarLayout>
     {component}
   </SidebarLayout>
@@ -21,12 +21,13 @@ function createSidebarComponents(component){
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
-    <Route  path='/' element={createSidebarComponents(<App/>)} />
-    <Route  path='/home' element={createSidebarComponents(<Home/>)} />
-    <Route  path='/about' element={createSidebarComponents(<About/>)} />
-    <Route  path='/contact' element={createSidebarComponents(<ContactUs/>)} />
-    <Route  path='/users' element={createSidebarComponents(<Users/>)} />
-    <Route  path='/login' element={createSidebarComponents(<Login/>)} />
+      <Route path='/' element={createSidebarComponents(<App />)} />
+      <Route path='/home' element={createSidebarComponents(<Home />)} />
+      <Route path='/about' element={createSidebarComponents(<About />)} />
+      <Route path='/contact' element={createSidebarComponents(<ContactUs />)} />
+      <Route path='/products' element={createSidebarComponents(<Products />)} />
+      <Route path='/users' element={createSidebarComponents(<Users />)} />
+      <Route path='/login' element={createSidebarComponents(<Login />)} />
     </Routes>
   </BrowserRouter>
 )

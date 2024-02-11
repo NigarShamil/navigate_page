@@ -6,6 +6,7 @@ import PeopleIcon from '@mui/icons-material/People';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import SearchIcon from '@mui/icons-material/Search';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import "./style.css"
 import Logo from "./shape.png"
 import { useState } from "react";
@@ -60,6 +61,12 @@ export default function SidebarLayout({ children }) {
                                     <Link to={'/users'} className="links">
                                         <span className="icons"><PeopleIcon /></span>
                                         <span className="text nav-text"> Users</span>
+                                    </Link>
+                                </li>
+                                <li className="nav-link">
+                                    <Link to={'/products'} className="links">
+                                        <span className="icons"><ShoppingBagIcon /></span>
+                                        <span className="text nav-text"> Products</span>
                                     </Link>
                                 </li>
                                 <li className="nav-link">
